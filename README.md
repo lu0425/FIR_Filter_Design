@@ -185,7 +185,7 @@ The verification compares three computation methods to validate the Verilog impl
 
 ---
 
-##### 3. Verilog Simulation Output
+##### 3. Verilog Simulation Output(divided by 2^9)
 
 <div align="center">
   <img src="media/verilog_result.png" alt="Verilog Simulation Results" width="800"/>
