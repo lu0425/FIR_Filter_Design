@@ -79,13 +79,34 @@ RTL code completed.
 
 ## File Description
 
-*To be updated*
+| File Name | Description |
+|-----------|-------------|
+| `fir_filter.v` | Main RTL module implementing the 21-tap FIR filter architecture |
+| `bits_calculate.m` | MATLAB script for coefficient bit-width calculation, SNR analysis, and fixed-point quantization |
+| `coeff_conversion.m` | MATLAB script for converting floating-point filter coefficients to 9-bit binary representation |
+| `coeff_9bit.txt` | Text file containing the 21 quantized filter coefficients in 9-bit binary format |
+| `input_tm_data.txt` | Test vector file containing 40 input samples for verification testing |
+| `testbench.v` | Verilog testbench for simulation and verification (if applicable) |
+
+---
 
 &nbsp;
 
 ## Specification
 
-*To be updated*
+### Input Ports
+
+| Port Name | Width | Description |
+|-----------|-------|-------------|
+| `clk` | 1-bit | System clock signal - synchronizes all operations in the filter |
+| `rst` | 1-bit | Reset signal - initializes the filter state (active high/low) |
+| `in` | 10-bit | Input data signal - signed 10-bit input samples (range: -512 to 511) |
+
+### Output Ports
+
+| Port Name | Width | Description |
+|-----------|-------|-------------|
+| `out` | 24-bit | Filtered output signal - signed 24-bit result of the convolution operation |
 
 &nbsp;
 
