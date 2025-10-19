@@ -138,13 +138,10 @@ For different bit widths (L = 5 to 15):
 ### ◆ Step 2: Coefficient Conversion to Binary
 
 Convert the floating-point filter coefficients to 9-bit fixed-point binary representation.
+<div align="center">
+  <img src="media/2.png" alt="FIR Filter Equation" width="650"/>
+</div>
 
-**Original Coefficients**:
-```
-[-0.0156, 0.0182, 0.0417, 0.0260, -0.0208, -0.0677, -0.0625, 
- 0.0182, 0.1536, 0.2813, 0.3333, 0.2813, 0.1536, 0.0182,
- -0.0625, -0.0677, -0.0208, 0.0260, 0.0417, 0.0182, -0.0156]
-```
 
 ### ◆ Step 3: Verilog Implementation
 
