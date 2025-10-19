@@ -87,7 +87,7 @@ RTL code completed.
 
 The design methodology follows a four-step process to ensure optimal filter performance:
 
-### Step 1: Coefficient Bit-Width Calculation
+### ◆ Step 1: Coefficient Bit-Width Calculation
 
 **Objective**: Determine the required bit width to achieve the target SNR specification through fixed-point quantization.
 
@@ -107,15 +107,15 @@ For different bit widths (L = 5 to 15):
 
 **Result**: 9-bit representation achieves SNR ≈ 56.83dB (>50dB requirement)
 
-### Step 2: Coefficient Conversion to Binary
+### ◆ Step 2: Coefficient Conversion to Binary
 
 Convert the floating-point filter coefficients to 9-bit fixed-point binary representation.
 
-### Step 3: Verilog Implementation
+### ◆ Step 3: Verilog Implementation
 
 Implement the FIR filter in Verilog HDL with the 9-bit quantized coefficients from Step 2.
 
-### Step 4: Verification
+### ◆ Step 4: Verification
 
 Compare three computation methods to validate the Verilog implementation:
 
