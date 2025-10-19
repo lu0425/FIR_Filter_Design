@@ -86,7 +86,6 @@ RTL code completed.
 | `coeff_conversion.m` | MATLAB script for converting floating-point filter coefficients to 9-bit binary representation |
 | `coeff_9bit.txt` | Text file containing the 21 quantized filter coefficients in 9-bit binary format |
 | `input_tm_data.txt` | Test vector file containing 40 input samples for verification testing |
-| `testbench.v` | Verilog testbench for simulation and verification (if applicable) |
 
 ---
 
