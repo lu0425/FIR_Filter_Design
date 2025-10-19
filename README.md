@@ -147,23 +147,42 @@ Input: 40 samples of TM (Test Mode) data
  377, 250, 98, -64, -220, -354, -452, -505, -507, -458, -364, -233, -78, 84]
 ```
 
-#### Verification Results:
-The figure below shows the results from the three computation methods.
-- MATLAB floating-point and fixed-point results match (starting from index 21)
-- Verilog simulation output with MATLAB fixed-point computation
-The figure below shows the results from the three computation methods.
-1. MATLAB floating-point results
+#### Verification Results
+
+The verification compares three computation methods to validate the Verilog implementation:
+
+1. **MATLAB Floating-Point Computation**: Ideal result using original coefficients
+2. **MATLAB Fixed-Point Computation**: Quantized result using 9-bit coefficients
+3. **Verilog Simulation Output**: Hardware implementation result
+
+---
+
+##### 1. MATLAB Floating-Point Results
+
 <div align="center">
-  <img src="media/matlab_result.png" alt="FIR Filter Equation" width="800"/>
+  <img src="media/matlab_result.png" alt="MATLAB Floating-Point Results" width="800"/>
+  <p><i>Figure: MATLAB floating-point computation output</i></p>
 </div>
-2. MATLAB fixed-point results
+
+---
+
+##### 2. MATLAB Fixed-Point Results
+
 <div align="center">
-  <img src="media/matlab_trun_result.png" alt="FIR Filter Equation" width="800"/>
+  <img src="media/matlab_trun_result.png" alt="MATLAB Fixed-Point Results" width="800"/>
+  <p><i>Figure: MATLAB fixed-point computation output (9-bit quantized coefficients)</i></p>
 </div>
-3. Verilog simulation outputs
+
+---
+
+##### 3. Verilog Simulation Output
+
 <div align="center">
-  <img src="media/verilog_result.png" alt="FIR Filter Equation" width="800"/>
+  <img src="media/verilog_result.png" alt="Verilog Simulation Results" width="800"/>
+  <p><i>Figure: Verilog hardware simulation output</i></p>
 </div>
+
+---
 
 - **Conclusion**: In the MATLAB computation, the first output appears after 21 clock cycles, so the MATLAB results are compared starting from the 21st sample.
 After truncation in MATLAB, the fixed-point computation results are consistent with the Verilog results!
