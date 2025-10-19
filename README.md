@@ -5,7 +5,7 @@
 - [Implement Status](#implement-status)
 - [File Description](#file-description)
 - [Specification](#specification)
-- [Method & Results](#method-&-results)
+- [Method & Results](#method--results)
 - [RTL Waveform](#rtl-waveform)
 
 &nbsp;
@@ -108,7 +108,7 @@ RTL code completed.
 
 &nbsp;
 
-## Method
+## Method & Results
 
 The design methodology follows a four-step process to ensure optimal filter performance:
 
