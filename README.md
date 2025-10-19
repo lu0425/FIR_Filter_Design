@@ -29,7 +29,6 @@ As shown in the architecture diagram, the input signal x flows through a series 
 The table below is the coefficient table of the FIR filter.
 <div align="center">
   <img src="media/coeff_table.png" alt="coefficient table" width="600"/>
-  <p><i>Figure 1: 21-tap FIR Filter Block Diagram</i></p>
 </div>
 
 &nbsp;
