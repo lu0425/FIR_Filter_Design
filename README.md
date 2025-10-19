@@ -192,7 +192,7 @@ The verification compares three computation methods to validate the Verilog impl
   <p><i>Figure: Verilog hardware simulation output</i></p>
 </div>
 
----
+
 
 - **Conclusion**: In the MATLAB computation, the first output appears after 21 clock cycles, so the MATLAB results are compared starting from the 21st sample.
 After truncation in MATLAB, the fixed-point computation results are consistent with the Verilog results!
