@@ -13,7 +13,7 @@
 ## Overview
 
 This project implements a 21-tap Finite Impulse Response (FIR) filter using Verilog HDL. The FIR filter is a fundamental digital signal processing component widely used in applications such as audio processing, communications, and image filtering.
-A Finite Impulse Response (FIR) filter is a type of digital filter characterized by its finite-duration impulse response. Unlike IIR (Infinite Impulse Response) filters, FIR filters use only current and past input samples to compute the output, making them inherently stable.
+A FIR filter is a type of digital filter characterized by its finite-duration impulse response. Unlike IIR filters, FIR filters use only current and past input samples to compute the output, making them inherently stable.
 The "21-tap" designation indicates that the filter uses 21 coefficients (or taps) in its computation. This architecture consists of:
 
 - **20 Delay Elements (D)**: Store the previous 20 input samples, creating a delay line
