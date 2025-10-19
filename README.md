@@ -28,7 +28,8 @@ As shown in the architecture diagram, the input signal x flows through a series 
 
 The table below is the coefficient table of the FIR filter.
 <div align="center">
-  <img src="media/coeff_table.png" alt="coefficient table" width="600"/>
+  <p><i>Table 1: Coefficient Table</i></p>
+  <img src="media/coeff_table.png" alt="coefficient table" width="500"/>
 </div>
 
 &nbsp;
