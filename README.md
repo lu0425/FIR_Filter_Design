@@ -151,12 +151,6 @@ Input: 40 samples of TM (Test Mode) data
 
 The verification compares three computation methods to validate the Verilog implementation:
 
-1. **MATLAB Floating-Point Computation**: Ideal result using original coefficients
-2. **MATLAB Fixed-Point Computation**: Quantized result using 9-bit coefficients
-3. **Verilog Simulation Output**: Hardware implementation result
-
----
-
 ##### 1. MATLAB Floating-Point Results
 
 <div align="center">
