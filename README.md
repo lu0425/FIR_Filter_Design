@@ -185,7 +185,7 @@ The verification compares three computation methods to validate the Verilog impl
 
 ---
 
-##### 3. Verilog Simulation Output(divided by 2⁹, since the coefficient is multiplied by 2⁹ when doing fixed-point operations)
+##### 3. Verilog Simulation Output (It is divided by 2⁹, since the coefficient is multiplied by 2⁹ when doing fixed-point operations)
 
 <div align="center">
   <img src="media/verilog_result.png" alt="Verilog Simulation Results" width="800"/>
