@@ -164,9 +164,8 @@ The figure below shows the results from the three computation methods.
   <img src="media/verilog_result.png" alt="FIR Filter Equation" width="800"/>
 </div>
 
-- **Conclusion**: Verilog implementation is functionally correct
-
-**Note**: MATLAB's `conv` function outputs (N+M-1) samples, where the first sample includes only the first input. For a 21-tap filter, valid output starts from sample 21 onwards.
+- **Conclusion**: In the MATLAB computation, the first output appears after 21 clock cycles, so the MATLAB results are compared starting from the 21st sample.
+After truncation in MATLAB, the fixed-point computation results are consistent with the Verilog results!
 
 &nbsp;
 
