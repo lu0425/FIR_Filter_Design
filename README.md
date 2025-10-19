@@ -8,6 +8,8 @@
 - [Method](#method)
 - [RTL Waveform](#rtl-waveform)
 
+&nbsp;
+
 ## Overview
 
 This project implements a 21-tap Finite Impulse Response (FIR) filter using Verilog HDL. The FIR filter is a fundamental digital signal processing component widely used in applications such as audio processing, communications, and image filtering.
@@ -24,6 +26,8 @@ The "21-tap" designation indicates that the filter uses 21 coefficients (or taps
 </div>
 As shown in the architecture diagram, the input signal x flows through a series of delay elements (D blocks). At each tap point, the delayed signal is multiplied by its corresponding coefficient (b₀, b₁, ..., b₂₀), and all products are summed together through the adder chain to produce the output y.
 
+&nbsp;
+
 ### Operating Principle
 
 The filter operates through the following mechanism:
@@ -32,12 +36,14 @@ The filter operates through the following mechanism:
 2. **Weighted Multiplication**: Each of the 21 samples (current + 20 delayed) is multiplied by its corresponding coefficient b[k]
 3. **Accumulation**: All 21 products are summed together to produce the current output sample
 
+&nbsp;
+
 ### Mathematical Expression
 
 The output y(n) is calculated as:
 
 <div align="center">
-  <img src="media/equation.png" alt="FIR Filter Equation" width="250"/>
+  <img src="media/image2.png" alt="FIR Filter Equation" width="250"/>
 </div>
 
 The mathematical formula represents the convolution operation where:
@@ -45,6 +51,8 @@ The mathematical formula represents the convolution operation where:
 - **x(n-k)**: Input signal delayed by k samples
 - **bₖ**: Filter coefficient for the k-th tap
 - **M-1 = 20**: The summation runs from k=0 to k=20, covering all 21 taps
+
+&nbsp;
 
 ### Applications
 
@@ -55,17 +63,25 @@ The mathematical formula represents the convolution operation where:
 - **Image Processing**: Edge detection, smoothing
 - **Instrumentation**: Anti-aliasing filters
 
+&nbsp;
+
 ## Implement Status
 
 RTL code completed.
+
+&nbsp;
 
 ## File Description
 
 *To be updated*
 
+&nbsp;
+
 ## Specification
 
 *To be updated*
+
+&nbsp;
 
 ## Method
 
@@ -114,8 +130,10 @@ Compare three computation methods to validate the Verilog implementation:
 
 **Note**: MATLAB's `conv` function outputs (N+M-1) samples, where the first sample includes only the first input. For a 21-tap filter, valid output starts from sample 21 onwards.
 
+&nbsp;
+
 ## RTL Waveform
 
 *To be updated*
 
-
+&nbsp;
