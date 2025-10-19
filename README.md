@@ -133,7 +133,8 @@ Compare three computation methods to validate the Verilog implementation:
 &nbsp;
 
 ## RTL Waveform
-
-*To be updated*
+<div align="center">
+  <img src="media/waveform.png" alt="FIR Filter Equation" width="800"/>
+</div>
 
 &nbsp;
