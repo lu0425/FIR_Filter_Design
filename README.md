@@ -5,7 +5,7 @@
 - [Implement Status](#implement-status)
 - [File Description](#file-description)
 - [Specification](#specification)
-- [Method](#method)
+- [Method & Results](#method-&-results)
 - [RTL Waveform](#rtl-waveform)
 
 &nbsp;
@@ -111,6 +111,9 @@ For different bit widths (L = 5 to 15):
 - Compute SNR: `SNR(L) = 10 * log10(signal_power / noise_power)`
 
 **Result**: 9-bit representation achieves SNR ≈ 56.83dB (>50dB requirement)
+<div align="center">
+  <img src="media/bits_cal.png" alt="FIR Filter Equation" width="550"/>
+</div>
 
 ### ◆ Step 2: Coefficient Conversion to Binary
 
@@ -144,8 +147,23 @@ Input: 40 samples of TM (Test Mode) data
 ```
 
 #### Verification Results:
+The figure below shows the results from the three computation methods.
 - MATLAB floating-point and fixed-point results match (starting from index 21)
-- Verilog simulation output matches MATLAB fixed-point computation
+- Verilog simulation output with MATLAB fixed-point computation
+The figure below shows the results from the three computation methods.
+1. MATLAB floating-point results
+<div align="center">
+  <img src="media/matlab_result.png" alt="FIR Filter Equation" width="800"/>
+</div>
+2. MATLAB fixed-point results
+<div align="center">
+  <img src="media/matlab_trun_result.png" alt="FIR Filter Equation" width="800"/>
+</div>
+3. Verilog simulation outputs
+<div align="center">
+  <img src="media/verilog_result.png" alt="FIR Filter Equation" width="800"/>
+</div>
+
 - **Conclusion**: Verilog implementation is functionally correct
 
 **Note**: MATLAB's `conv` function outputs (N+M-1) samples, where the first sample includes only the first input. For a 21-tap filter, valid output starts from sample 21 onwards.
