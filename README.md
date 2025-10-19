@@ -98,15 +98,14 @@ RTL code completed.
 
 | Port Name | Width | Description |
 |-----------|-------|-------------|
-| `clk` | 1-bit | System clock signal - synchronizes all operations in the filter |
-| `rst` | 1-bit | Reset signal - initializes the filter state (active high/low) |
-| `in` | 10-bit | Input data signal - signed 10-bit input samples (range: -512 to 511) |
+| `clk` | 1-bit | System clock signal |
+| `in` | 10-bit | Input data signal |
 
 ### Output Ports
 
 | Port Name | Width | Description |
 |-----------|-------|-------------|
-| `out` | 24-bit | Filtered output signal - signed 24-bit result of the convolution operation |
+| `out` | 24-bit | Filtered output signal |
 
 &nbsp;
 
