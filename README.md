@@ -17,14 +17,12 @@ The "21-tap" designation indicates that the filter uses 21 coefficients (or taps
 - **20 Delay Elements (D)**: Store the previous 20 input samples, creating a delay line
 - **21 Multipliers (⊗)**: Multiply each input sample by its corresponding coefficient
 - **21 Adders (⊕)**: Sum all weighted samples to produce the final output
-```
-Input x → [D] → [D] → ... → [D] → (20 delays total)
-           ↓     ↓           ↓
-          [×]   [×]   ...   [×]    (21 multipliers)
-          b0    b1          b20
-           ↓     ↓           ↓
-          [+] → [+] → ... → [+] → Output y
-```
+- 
+<div align="center">
+  <img src="media/image1.png" alt="21-tap FIR Filter Architecture" width="600"/>
+  <p><i>Figure 1: 21-tap FIR Filter Block Diagram</i></p>
+</div>
+As shown in the architecture diagram, the input signal x flows through a series of delay elements (D blocks). At each tap point, the delayed signal is multiplied by its corresponding coefficient (b₀, b₁, ..., b₂₀), and all products are summed together through the adder chain to produce the output y.
 
 ### Operating Principle
 
@@ -37,66 +35,16 @@ The filter operates through the following mechanism:
 ### Mathematical Expression
 
 The output y(n) is calculated as:
-```
-y(n) = Σ(k=0 to 20) b_k × x(n-k)
-     = b₀·x(n) + b₁·x(n-1) + b₂·x(n-2) + ... + b₂₀·x(n-20)
-```
 
-Where:
-- `x(n)` is the current input sample
-- `x(n-k)` is the input sample k time steps ago
-- `y(n)` is the current output sample
-- `b_k` are the filter coefficients (k = 0 to 20)
+<div align="center">
+  <img src="media/equation.png" alt="FIR Filter Equation" width="250"/>
+</div>
 
-### Key Characteristics
-
-#### 1. **Frequency Selectivity**
-The filter coefficients determine the frequency response. By carefully designing these coefficients, the filter can:
-- Pass certain frequencies (passband)
-- Attenuate unwanted frequencies (stopband)
-- Implement lowpass, highpass, bandpass, or bandstop responses
-
-#### 2. **Linear Phase Response**
-When coefficients are symmetric (b[k] = b[20-k]), the filter achieves linear phase, meaning:
-- No phase distortion in the output signal
-- All frequency components experience equal delay
-- Critical for applications requiring waveform preservation
-
-#### 3. **Group Delay**
-The 21-tap filter introduces a group delay of:
-```
-Delay = (N-1)/2 = (21-1)/2 = 10 samples
-```
-This means the output is delayed by 10 sample periods relative to the input.
-
-#### 4. **Computational Complexity**
-Each output sample requires:
-- **21 multiplications**: One for each tap
-- **20 additions**: To sum all products
-- **20 memory accesses**: To retrieve delayed samples
-
-#### 5. **Stability**
-FIR filters are always stable because they:
-- Have no feedback paths
-- Use only finite summation
-- Cannot produce unbounded output for bounded input
-
-### Trade-offs in Tap Count
-
-**More taps (e.g., 21 vs. 11)**:
-- ✅ Better frequency selectivity (sharper transition bands)
-- ✅ Lower passband ripple
-- ✅ Higher stopband attenuation
-- ❌ Increased computational cost
-- ❌ Higher latency (group delay)
-- ❌ More hardware resources required
-
-**Fewer taps**:
-- ✅ Lower computational complexity
-- ✅ Reduced latency
-- ✅ Smaller hardware footprint
-- ❌ Wider transition bands
-- ❌ Poorer frequency selectivity
+The mathematical formula represents the convolution operation where:
+- **y(n)**: Output signal at time n
+- **x(n-k)**: Input signal delayed by k samples
+- **bₖ**: Filter coefficient for the k-th tap
+- **M-1 = 20**: The summation runs from k=0 to k=20, covering all 21 taps
 
 ### Applications
 
@@ -109,7 +57,7 @@ FIR filters are always stable because they:
 
 ## Implement Status
 
-*To be updated*
+RTL code completed.
 
 ## File Description
 
@@ -191,12 +139,4 @@ Input: 40 samples of TM (Test Mode) data
 
 *To be updated*
 
----
 
-## License
-
-*Add your license information here*
-
-## Author
-
-*Add your information here*
