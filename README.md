@@ -19,7 +19,7 @@ The "21-tap" designation indicates that the filter uses 21 coefficients (or taps
 - **20 Delay Elements (D)**: Store the previous 20 input samples, creating a delay line
 - **21 Multipliers (⊗)**: Multiply each input sample by its corresponding coefficient
 - **21 Adders (⊕)**: Sum all weighted samples to produce the final output
-- 
+
 <div align="center">
   <img src="media/image1.png" alt="21-tap FIR Filter Architecture" width="600"/>
   <p><i>Figure 1: 21-tap FIR Filter Block Diagram</i></p>
