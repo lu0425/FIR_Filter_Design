@@ -93,20 +93,7 @@ For different bit widths (L = 5 to 15):
 
 ### Step 2: Coefficient Conversion to Binary
 
-Convert the floating-point filter coefficients to 9-bit fixed-point binary representation:
-```matlab
-for i = 1:numel(b)
-    binaryCoeff = dec2bin(floor(b(i) * 2^9), 9);
-    fprintf('%s\n', binaryCoeff);
-end
-```
-
-**Original Coefficients**:
-```
-[-0.0156, 0.0182, 0.0417, 0.0260, -0.0208, -0.0677, -0.0625, 
- 0.0182, 0.1536, 0.2813, 0.3333, 0.2813, 0.1536, 0.0182,
- -0.0625, -0.0677, -0.0208, 0.0260, 0.0417, 0.0182, -0.0156]
-```
+Convert the floating-point filter coefficients to 9-bit fixed-point binary representation.
 
 ### Step 3: Verilog Implementation
 
@@ -119,14 +106,6 @@ Compare three computation methods to validate the Verilog implementation:
 1. **MATLAB Direct Computation**: Floating-point calculation
 2. **MATLAB Fixed-Point Computation**: Using quantized coefficients
 3. **Verilog Simulation Result**: Hardware implementation output
-
-#### Test Vector:
-Input: 40 samples of TM (Test Mode) data
-```
-[160, 304, 417, 489, 511, 482, 405, 287, 139, -22, -181, -322, -430,
- -496, -512, -476, -392, -270, -120, 42, 200, 337, 441, 500, 509, 467,
- 377, 250, 98, -64, -220, -354, -452, -505, -507, -458, -364, -233, -78, 84]
-```
 
 #### Verification Results:
 - MATLAB floating-point and fixed-point results match (starting from index 21)
