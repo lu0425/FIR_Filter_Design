@@ -26,6 +26,12 @@ The "21-tap" designation indicates that the filter uses 21 coefficients (or taps
 </div>
 As shown in the architecture diagram, the input signal x flows through a series of delay elements (D blocks). At each tap point, the delayed signal is multiplied by its corresponding coefficient (b₀, b₁, ..., b₂₀), and all products are summed together through the adder chain to produce the output y.
 
+The table below is the coefficient table of the FIR filter.
+<div align="center">
+  <img src="media/coeff_table.png" alt="coefficient table" width="600"/>
+  <p><i>Figure 1: 21-tap FIR Filter Block Diagram</i></p>
+</div>
+
 &nbsp;
 
 ### Operating Principle
