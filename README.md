@@ -139,7 +139,7 @@ For different bit widths (L = 5 to 15):
 
 Convert the floating-point filter coefficients to 9-bit fixed-point binary representation.
 <div align="center">
-  <img src="media/2.png" alt="FIR Filter Equation" width="650"/>
+  <img src="media/step2.png" alt="step2" width="650"/>
 </div>
 
 
