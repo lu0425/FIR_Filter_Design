@@ -132,7 +132,7 @@ For different bit widths (L = 5 to 15):
 
 **Result**: 9-bit representation achieves SNR ≈ 56.83dB (>50dB requirement)
 <div align="center">
-  <img src="media/bits_cal.png" alt="FIR Filter Equation" width="550"/>
+  <img src="media/bits_cal.png" alt="FIR Filter Equation" width="450"/>
 </div>
 
 ### ◆ Step 2: Coefficient Conversion to Binary
