@@ -73,7 +73,7 @@ The mathematical formula represents the convolution operation where:
 
 ## Implement Status
 
-RTL code completed.
+The project has completed the RTL code.
 
 &nbsp;
 
